@@ -9,8 +9,21 @@ let identity = (val) => {
 //
 // EX: first([1, 2, 3, 4, 5, 6], 2) --> [1, 2]
 // EX: first([10, 34, 68, 19]) --> 10
-let first = (array, n) => {
-};
+let first =  function(array, n) {
+      if (array == null) 
+      return void 0;
+    if (n == null) 
+      return array[0];
+    if (n < 0)
+      return [];
+    return array.slice(0, n);
+  };
+
+console.log(first([1,2,3,4,5,6]));
+console.log(first([10,34,68,19])
+)
+
+https://www.w3resource.com/w3r_images/javascript-array-exercise-3.png
 
 // Like first, but for the last elements. If n is undefined, return just the
 // last element.
