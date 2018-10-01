@@ -69,8 +69,15 @@ let reject = (collection, test) => {
 // Produce a duplicate-free version of the array.
 //
 // EX: uniq([1, 1, 2, 2, 3, 4, 5]) --> [1, 2, 3, 4, 5]
-let uniq = (array) => {
-};
+let numbers = [1, 1, 2, 2, 3, 4, 5];
+
+let uniq_numbers = [... new Set(numbers)];
+
+console.log(uniq_numbers);
+
+[ 1, 2, 3, 4, 5 ]
+=> undefined
+
 
 
 // Return the results of applying an iterator to each element.
