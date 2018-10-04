@@ -1,8 +1,8 @@
 // Returns whatever value is passed as the argument.
 //
 // EX: identity(6) --> 6
-let identity = (val) => {
-};
+
+print(abs(6))
 
 // Return an array of the first n elements of an array. If n is undefined,
 // return just the first element.
@@ -33,12 +33,24 @@ https://www.w3resource.com/w3r_images/javascript-array-exercise-3.png
 let last = (array, n) => {
 };
 
+
+
+
 // Call iterator(value, key, collection) for each element of collection.
 // Accepts both arrays and objects.
 //
 // each() does not have a return value, but rather simply runs the
 // iterator function over each item in the input collection.
-let each = (collection, iterator) => {
+ let each = function(collection, iterator){
+  if(Array.isArray(collection)){
+    for(var i = 0; i < collection.length; i++){
+    iterator(collection[i], i, collection);
+    }
+  } else if(typeof collection === 'object'){
+    for(var key in collection){
+      iterator(collection[key], key, collection);
+    }
+  }
 };
 
 // Returns the index at which value can be found in the array, or -1 if value
